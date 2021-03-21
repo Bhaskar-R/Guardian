@@ -19,11 +19,11 @@ LinkedIN - https://www.linkedin.com/in/bhaskar9980/
 //Uncomment the below line for Serial debugging
 //#define Serial_Debug
 
-#define WIFI_SSID "Dlink 2.5_Bhaskar"
-#define WIFI_PASSWORD "Bh@skar@123"
+#define WIFI_SSID "WIFI_username"
+#define WIFI_PASSWORD "WIFI_Password"
 
-#define FIREBASE_HOST "esp32firebase-4be73-default-rtdb.firebaseio.com" // Database URL
-#define FIREBASE_AUTH "VFw1il55fF3A0qIxZ9CqwU3BDsFp9zMMJaoSfCec"        // Secret Key
+#define FIREBASE_HOST "Enter your Database URL"        // Database URL
+#define FIREBASE_AUTH "Enter your Database Secret Key" // Secret Key
 
 #define Slave_address 0x2F
 #define BucketMotorFrequency 10
