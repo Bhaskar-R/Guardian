@@ -1,4 +1,4 @@
-Automatic_Hydroponics_V2
+Automatic Hydroponics System
 ==========================
 
 # The schematic diagram
