@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name Thilak)(type Legacy)(uri ${KIPRJMOD}/Thilak.lib)(options "")(descr ""))
+)
