@@ -6,13 +6,19 @@
 
 <h2 align="center">AHS</h2>
 
-
 <p align="center">
   A Fully Automatic Operating System that controls all the parameters of the Hydroponics System. 
 </p>
 <br>
 
 ## Table of contents
+- [Parameters Measured](#Parameters-Measured-(As-of-Now))
+- [DataBase](#DataBase)
+- [Controllable Parameters](#Controllable-Parameters)
+    - [Motors and Light](#Motors-and-Light)
+    - [Humidity and Temperature](#Humidity-and-Temperature)
+    - [Light Interval](#Light-Interval)
+    - [Motor Running Duration](#Motor-Running-Duration)
 - [The Schematic diagram](#The-Schematic-diagram)
     - [Master Board](#The-Schematic-Diagram-of-Master-board)
     - [Slave Board](#The-Schematic-of-Slave-Board)
@@ -31,6 +37,46 @@
     - [Functions](#Functions)
     - [Usage](#Usage)
 - [License](#License)
+
+## Parameters Measured (As of Now)
+* Temperature (DHT)
+* Humidity (DHT)
+* Tank Water Level
+* Reservoir Water Level
+* Plant Motor
+* Reservoir Motor
+* Mist Motor
+* Lighting  
+
+## DataBase
+- Any DataBase can used to store the Data and control the System Remotely
+- For this project I have used FireBase - A Realtime DataBase
+
+A Few Pictures of FireBase
+![Firebase](Images/RDB-1.png)
+![Firebase](Images/RDB-2.png)
+
+## Controllable Parameters  
+
+### Motors and Light
+
+There are two Modes for Controlling the Motors and lighting
+
+|Digits |Status |Mode|
+|-------|-------|----|
+|0      |Off    |Manual Override Mode ON |    
+|1      |On     |Manual Override Mode ON |    
+|2      | -     |Manual Override Mode OFF| 
+
+### Humidity and Temperature
+
+We can Manually Control/ Automate the Threshold Values of Humidity and Temperature as per the crop  
+
+### Light Interval 
+We can Manually control/ Automate the Intervals of Lighting to control the Temperature as per the requirements of the crop 
+
+### Motor Running Duration
+We can Manually control/ Automate the Intervals of running Plant Motor for regular watering as per the requirements of the crop 
 
 
 ## The Schematic diagram
