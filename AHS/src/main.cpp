@@ -75,6 +75,12 @@ int SetBucketMotor;
 int SetLight;
 int SetWifi;
 int DumpEEPROM;
+int SetTemperature = 30;
+int SetHumidity = 60;
+int SetDuration = 5; //Time interval for running plant motor
+int SetFrequency = 10;
+int SetLightON = 6;
+int SetLightOFF = 20;
 
 String messageStatic = "Team REAPonROOF";
 
@@ -180,7 +186,13 @@ void ReceiveData()
     if (Firebase.getInt(fbdo, "/Controls/Bucket Motor", SetBucketMotor) &&
         Firebase.getInt(fbdo, "/Controls/Light", SetLight) &&
         Firebase.getInt(fbdo, "/Controls/Mist Motor", SetMistMotor) &&
-        Firebase.getInt(fbdo, "/Controls/Plant Motor", SetPlantMotor))
+        Firebase.getInt(fbdo, "/Controls/Plant Motor", SetPlantMotor) &&
+        Firebase.getInt(fbdo, "/Controls/Set-Duration", SetDuration) &&
+        Firebase.getInt(fbdo, "/Controls/Set-Frequency", SetFrequency) &&
+        Firebase.getInt(fbdo, "/Controls/Set-Humidity", SetHumidity) &&
+        Firebase.getInt(fbdo, "/Controls/Set-Light_ON", SetLightON) &&
+        Firebase.getInt(fbdo, "/Controls/Set-Light_OFF", SetLightOFF) &&
+        Firebase.getInt(fbdo, "/Controls/Set-Temperature", SetTemperature))
     {
         ReceivedDataProperly = 1;
     }
@@ -216,6 +228,10 @@ void SendData()
         Firebase.setInt(fbdo, "/Status/Bucket Motor", BucketMotor) &&
         Firebase.setInt(fbdo, "/Status/Mist Motor", MistMotor) &&
         Firebase.setInt(fbdo, "/Status/Light Pin", LightPin) &&
+        Firebase.setInt(fbdo, "/Status/WiFi", WifiStatus) &&
+        Firebase.setInt(fbdo, "/Status/DataBase", DataBaseStatus) &&
+        Firebase.setInt(fbdo, "/Status/A-Board", SlaveBoardStatus) &&
+        Firebase.setInt(fbdo, "/Status/DHT", DHTStatus) &&
         Firebase.setInt(fbdo, "/Water Level/Plant Bucket", PlantBucketLevel) &&
         Firebase.setInt(fbdo, "/Water Level/Reservoir Bucket", ReservoirLevel))
     {
@@ -360,11 +376,11 @@ void loop()
         Serial.println(ReservoirLevel);
 #endif
         //Bucket Motor
-        if (PlantBucketLevel == 1 && BucketMotor == 0 && ReservoirLevel != 1)
+        if (PlantBucketLevel == 1 && BucketMotor == 0 && ReservoirLevel > 1)
         {
             BucketMotor = 1;
         }
-        if ((PlantBucketLevel == 3 && BucketMotor == 1) || ReservoirLevel == 1 || ReservoirLevel == 0)
+        if ((PlantBucketLevel == 3 && BucketMotor == 1) || ReservoirLevel <= 1)
         {
             BucketMotor = 0;
         }
@@ -410,11 +426,11 @@ void loop()
         }
 
         // Plant Motor
-        if (((Minutes) % BucketMotorFrequency < BucketMotorDuration) && PlantMotor == 0)
+        if (((Minutes) % SetFrequency < SetDuration) && PlantMotor == 0)
         {
             PlantMotor = 1;
         }
-        if (((Minutes) % BucketMotorFrequency >= BucketMotorDuration) && PlantMotor == 1)
+        if (((Minutes) % SetFrequency >= SetDuration) && PlantMotor == 1)
         {
             PlantMotor = 0;
         }
@@ -442,11 +458,11 @@ void loop()
         }
 
         //Light
-        if ((6 <= Hour) && (Hour <= 20) && LightPin == 0)
+        if ((SetLightON <= Hour) && (Hour < SetLightOFF) && LightPin == 0)
         {
             LightPin = 1;
         }
-        if ((Hour >= 20) && LightPin == 1)
+        if ((SetLightOFF <= Hour) && LightPin == 1)
         {
             LightPin = 0;
         }
@@ -509,17 +525,17 @@ void loop()
         if ((Temperature != -1) && (Humidity != -1))
         {
             //Humidity
-            if (Humidity <= 60 && MistMotor == 0)
+            if (Humidity <= SetHumidity && MistMotor == 0)
             {
                 MistMotor = 1;
             }
 
             //Temperature
-            if (Temperature >= 30 && MistMotor == 0)
+            if (Temperature >= SetTemperature && MistMotor == 0)
             {
                 MistMotor = 1;
             }
-            if (Temperature < 30 && MistMotor == 1 && Humidity > 60)
+            if (Temperature < SetTemperature && MistMotor == 1 && Humidity > SetHumidity)
             {
                 MistMotor = 0;
             }
