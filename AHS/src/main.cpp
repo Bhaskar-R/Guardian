@@ -26,8 +26,6 @@ LinkedIN - https://www.linkedin.com/in/bhaskar9980/
 #define FIREBASE_AUTH "Enter your Database Secret Key" //Secret Key
 
 #define Slave_address 0x2F
-#define BucketMotorFrequency 10
-#define BucketMotorDuration 5
 
 //Defining the RTC clock
 RTC_DS1307 RTC;
