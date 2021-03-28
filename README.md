@@ -30,12 +30,7 @@
 - [EEPROM Database](#Using-EEPROM-Database)
     - [Functions](#Functions)
     - [Usage](#Usage)
-- [Contributing](#contributing)
-- [Community](#community)
-- [Versioning](#versioning)
-- [Creators](#creators)
-- [Thanks](#thanks)
-- [Copyright and license](#copyright-and-license)
+- [License](#License)
 
 
 ## The Schematic diagram
@@ -203,3 +198,8 @@ DataBase DB;
 ### getNextAddress()
 
 ### resetAddress()
+
+<br>
+
+## License
+Code released under the [MIT License](https://github.com/Bhaskar-R/Automated-Hydroponics-System/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
