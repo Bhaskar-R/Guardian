@@ -10,9 +10,7 @@
   A Fully Automatic Operating System that controls all the parameters of the Hydroponics System. 
 </p>
 <br>
-[![Open in Visual Studio Code]
-(https://open.vscode.dev/badges/open-in-vscode.svg)]
-(https://open.vscode.dev/Bhaskar-R/Automated-Hydroponics-System)
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/Bhaskar-R/Automated-Hydroponics-System)
 
 ## Table of contents
 - [Parameters Measured](#Parameters-Measured-(As-of-Now))
