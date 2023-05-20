@@ -14,7 +14,8 @@
 
 
 ## Table of contents
-- [Parameters Measured](#Parameters-Measured-(As-of-Now))
+- [Render](Render-of-Guardian)
+- [Parameters Measured](#Parameters-Measured)
 - [DataBase](#DataBase)
 - [Controllable Parameters](#Controllable-Parameters)
     - [Motors and Light](#Motors-and-Light)
@@ -40,7 +41,10 @@
     - [Usage](#Usage)
 - [License](#License)
 
-## Parameters Measured (As of Now)
+## Render of Guardian
+![Render](Images/Hydroponics_Render.jpeg)
+
+## Parameters Measured
 * Temperature (DHT)
 * Humidity (DHT)
 * Tank Water Level
