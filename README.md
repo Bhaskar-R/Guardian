@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h2 align="center">AHS</h2>
+<h2 align="center">Guardian</h2>
 
 <p align="center">
   A Fully Automatic Operating System that controls all the parameters of the Hydroponics System. 
