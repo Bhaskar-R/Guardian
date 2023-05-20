@@ -40,7 +40,7 @@
     - [Functions](#Functions)
     - [Usage](#Usage)
 - [Control System](#Control-System)
-- [Guardian](#Guardian)
+- [Sample of Guardian](#Sample-of-Guardian)
 - [License](#License)
 
 ## Render of Guardian
@@ -248,7 +248,7 @@ DataBase DB;
 ## Control System
 ![ControlSystem](Images/ControlSystem.jpeg)
 
-## Guardian 
+## Sample of Guardian 
 ![Guardian](Images/Hydroponics_System.jpg)
 
 ## License
