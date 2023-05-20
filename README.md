@@ -32,8 +32,8 @@
     - [Master Board](#Master-Board)
     - [Total Setup](#Total-Setup-Overview)
 - [I2CSB Library](#Using-`I2CSB`-library)
-    - [Adding Library](#How-to-add-the-library?)
-    - [Functions](#How-to-use-the-functions-in-the-library?)
+    - [Adding Library](#How-to-add-the-library)
+    - [Functions](#How-to-use-the-functions-in-the-library)
     - [Handling the Errors and Miscommunication](#Handling-the-Errors-and-Miscommunication)
     - [Communication definitions](#The-communication-definition)
 - [EEPROM Database](#Using-EEPROM-Database)
@@ -137,11 +137,11 @@ The slave arduino nano does the following:
  
 The Master ESP32 can access these function using the `I2CSB` Library. As the name suggests the communication happens in I2C protocol. 
 
-### How to add the library?
+### How to add the library
 
 To use the library just navigate to [I2CSB](Arduino_sketches/Library/I2CSB/) and download it as zip file. Later in arduino IDE add this library using library manager and get started with the library using examples.
 
-### How to use the functions in the library?
+### How to use the functions in the library
 
 1. First instantiate the class I2CSB with a slave address
 ```cpp
