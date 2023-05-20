@@ -6,8 +6,7 @@
 
 <h2 align="center">Guardian</h2>
 
-<p align="center">
-  A Fully Automatic Operating System that controls all the parameters of the Hydroponics System. 
+<p align="center">Guardian is an advanced, fully automated hydroponics system designed to optimize plant growth and maximize yield. Utilizing micro-controllers and pH fuzzy logic control, it ensures precise nutrient delivery, enables remote monitoring, and achieves remarkable water savings while increasing crop productivity. 
 </p>
 <br>
 
