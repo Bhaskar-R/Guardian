@@ -39,6 +39,8 @@
 - [EEPROM Database](#Using-EEPROM-Database)
     - [Functions](#Functions)
     - [Usage](#Usage)
+- [Control System](#Control-System)
+- [Guardian](#Guardian)
 - [License](#License)
 
 ## Render of Guardian
@@ -242,6 +244,12 @@ DataBase DB;
 * Begin the EEPROM object ``` ee ``` using ``` ee.begin()```.
 
 <br>
+
+## Control System
+![ControlSystem](Images/ControlSystem.jpeg)
+
+## Guardian 
+![Guardian](Images/Hydroponics_System.jpg)
 
 ## License
 Code released under the [MIT License](https://github.com/Bhaskar-R/Automated-Hydroponics-System/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
