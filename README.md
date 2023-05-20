@@ -249,7 +249,7 @@ DataBase DB;
 ![ControlSystem](Images/ControlSystem.jpeg)
 
 ## Sample of Guardian 
-![Guardian](Images/Hydroponics_System.jpg)
+![Guardian](Images/HydroponicsSystem.jpg)
 
 ## License
 Code released under the [MIT License](https://github.com/Bhaskar-R/Automated-Hydroponics-System/blob/main/LICENSE). Docs released under [Creative Commons](https://creativecommons.org/licenses/by/3.0/).
